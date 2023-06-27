@@ -54,7 +54,7 @@ html {
 .container {
 	height: 100vh;
 	display: grid;
-	grid-template: 1fr 5fr / 1fr 4fr;
+	grid-template: 1fr 5fr / 1fr 5fr;
 }
 
 .sidebar {
@@ -84,7 +84,7 @@ html {
 	font-size: 1.5rem;
 }
 
-ul {
+.sidebar > ul {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
@@ -107,6 +107,7 @@ li > img {
   padding: 15px;
   display: grid;
   grid-template: 1fr 1fr / 2fr 1fr;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 1); */
 }
 
 .search {
@@ -125,7 +126,7 @@ li > img {
 .search-bar {
 	height: 1.5rem;
   width: 90%;
-  background-color: lightgrey;
+  background-color: lightgray;
   border-radius: 25px;
 }
 
@@ -154,7 +155,7 @@ li > img {
   height: 3.5rem;
 }
 
-p {
+.greeting > p {
   font-size: small;
   line-height: 20px;
 }
@@ -180,9 +181,70 @@ p > span {
   color:  white;
   border-radius: 15px;
   border-style: none;
+  font-weight: 900;
 }
 
 .content {
+  padding-top: 15px;
 	grid-area: 2 / 2 / span 1 / span 1;
   background: lightgray;
+  display: grid;
+  grid-template: 1fr 1fr / 3fr 1fr;
+  gap: 15px;
+}
+
+.content-title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.projects {
+  grid-area: 1 / 1 / span 2 / span 1;
+  padding: 15px;
+}
+
+.projects > ul {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  grid-auto-flow: row;
+  gap: 15px;
+}
+
+.project {
+  border-left: 6px solid orange;
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 0.1fr 2fr 0.1fr;
+}
+
+.project > p {
+  align-self: start;
+  font-size: small;
+  line-height: normal;
+  color: gray;
+}
+
+.project-title {
+  width: 100%;
+  font-weight: bold;
+}
+
+.edit-project {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.edit-project > button {
+  border: none;
+  border-style: none;
+  background-color: white;
+}
+
+.edit-project > button > img {
+  height: 1.2rem;
+  width: 1.2rem;
 }
