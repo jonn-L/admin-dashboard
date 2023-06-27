@@ -104,9 +104,85 @@ li > img {
 
 .header {
 	grid-area: 1 / 2 / span 1 / span 1;
+  padding: 15px;
+  display: grid;
+  grid-template: 1fr 1fr / 2fr 1fr;
 }
 
+.search {
+  padding-left: 1vw;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  grid-area: 1 1 / 1 span / 1span;
+}
+
+.search > img {
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+.search-bar {
+	height: 1.5rem;
+  width: 90%;
+  background-color: lightgrey;
+  border-radius: 25px;
+}
+
+.profile {
+  padding-right: 5vw;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  grid-area: 1 2 / 1 span 1span;
+  justify-self: end;
+}
+
+.profile > img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.greeting {
+  padding-left: 1vw;
+  display: flex;
+  align-items: center;
+}
+
+.greeting > img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+p {
+  font-size: small;
+  line-height: 20px;
+}
+
+p > span {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.edit-content {
+  align-self: center;
+  justify-self: end;
+  padding-right: 5vw;
+  grid-area: 2 / 2 / span 1 / span 1;
+  display: flex;
+  gap: 30px;
+}
+
+.edit-content > button {
+  width: 7vw;
+  padding: 10px;
+  background-color: #3b8ef3;
+  color:  white;
+  border-radius: 15px;
+  border-style: none;
+}
 
 .content {
 	grid-area: 2 / 2 / span 1 / span 1;
+  background: lightgray;
 }
